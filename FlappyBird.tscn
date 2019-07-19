@@ -1,0 +1,240 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://script/FlappyBird.gd" type="Script" id=1]
+[ext_resource path="res://asset/30810.jpg" type="Texture" id=2]
+[ext_resource path="res://script/pipe.gd" type="Script" id=3]
+[ext_resource path="res://asset/topPipe.png" type="Texture" id=4]
+[ext_resource path="res://asset/bottomPipe.png" type="Texture" id=5]
+[ext_resource path="res://script/bird.gd" type="Script" id=6]
+[ext_resource path="res://asset/player/player1.png" type="Texture" id=7]
+[ext_resource path="res://asset/player/player2.png" type="Texture" id=8]
+[ext_resource path="res://asset/player/player3.png" type="Texture" id=9]
+[ext_resource path="res://asset/player/player4.png" type="Texture" id=10]
+[ext_resource path="res://script/floor.gd" type="Script" id=11]
+[ext_resource path="res://asset/floor.png" type="Texture" id=12]
+[ext_resource path="res://script/floors.gd" type="Script" id=13]
+
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=7]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[node name="FlappyBird" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 500, 300 )
+scale = Vector2( 0.193, 0.142 )
+texture = ExtResource( 2 )
+
+[node name="pipe" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="pipe1" type="StaticBody2D" parent="pipe"]
+editor/display_folded = true
+position = Vector2( 1000, -300 )
+script = ExtResource( 3 )
+
+[node name="topPipe" type="Sprite" parent="pipe/pipe1"]
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 4 )
+
+[node name="bottomPipe" type="Sprite" parent="pipe/pipe1"]
+position = Vector2( 0, 700 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 5 )
+
+[node name="topPipeCollision" type="CollisionShape2D" parent="pipe/pipe1"]
+scale = Vector2( 2.7, 32.3 )
+shape = SubResource( 5 )
+
+[node name="bottomPipeCollision" type="CollisionShape2D" parent="pipe/pipe1"]
+position = Vector2( 0, 700 )
+scale = Vector2( 2.7, 19.1 )
+shape = SubResource( 6 )
+
+[node name="pipe2" type="StaticBody2D" parent="pipe"]
+editor/display_folded = true
+position = Vector2( 1200, -300 )
+script = ExtResource( 3 )
+
+[node name="topPipe" type="Sprite" parent="pipe/pipe2"]
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 4 )
+
+[node name="bottomPipe" type="Sprite" parent="pipe/pipe2"]
+position = Vector2( 0, 700 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 5 )
+
+[node name="topPipeCollision2" type="CollisionShape2D" parent="pipe/pipe2"]
+scale = Vector2( 2.7, 32.3 )
+shape = SubResource( 5 )
+
+[node name="bottomPipeCollision2" type="CollisionShape2D" parent="pipe/pipe2"]
+position = Vector2( 0, 700 )
+scale = Vector2( 2.7, 19.1 )
+shape = SubResource( 6 )
+
+[node name="pipe3" type="StaticBody2D" parent="pipe"]
+editor/display_folded = true
+position = Vector2( 1400, -300 )
+script = ExtResource( 3 )
+
+[node name="topPipe" type="Sprite" parent="pipe/pipe3"]
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 4 )
+
+[node name="bottomPipe" type="Sprite" parent="pipe/pipe3"]
+position = Vector2( 0, 700 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 5 )
+
+[node name="topPipeCollision3" type="CollisionShape2D" parent="pipe/pipe3"]
+scale = Vector2( 2.7, 32.3 )
+shape = SubResource( 5 )
+
+[node name="bottomPipeCollision3" type="CollisionShape2D" parent="pipe/pipe3"]
+position = Vector2( 0, 700 )
+scale = Vector2( 2.7, 19.1 )
+shape = SubResource( 6 )
+
+[node name="pipe4" type="StaticBody2D" parent="pipe"]
+editor/display_folded = true
+position = Vector2( 1600, -300 )
+script = ExtResource( 3 )
+
+[node name="topPipe" type="Sprite" parent="pipe/pipe4"]
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 4 )
+
+[node name="bottomPipe" type="Sprite" parent="pipe/pipe4"]
+position = Vector2( 0, 700 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 5 )
+
+[node name="topPipeCollision4" type="CollisionShape2D" parent="pipe/pipe4"]
+scale = Vector2( 2.7, 32.3 )
+shape = SubResource( 5 )
+
+[node name="bottomPipeCollision4" type="CollisionShape2D" parent="pipe/pipe4"]
+position = Vector2( 0, 700 )
+scale = Vector2( 2.7, 19.1 )
+shape = SubResource( 6 )
+
+[node name="pipe5" type="StaticBody2D" parent="pipe"]
+editor/display_folded = true
+position = Vector2( 1800, -300 )
+script = ExtResource( 3 )
+
+[node name="topPipe" type="Sprite" parent="pipe/pipe5"]
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 4 )
+
+[node name="bottomPipe" type="Sprite" parent="pipe/pipe5"]
+position = Vector2( 0, 700 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 5 )
+
+[node name="topPipeCollision5" type="CollisionShape2D" parent="pipe/pipe5"]
+scale = Vector2( 2.7, 32.3 )
+shape = SubResource( 5 )
+
+[node name="bottomPipeCollision5" type="CollisionShape2D" parent="pipe/pipe5"]
+position = Vector2( 0, 700 )
+scale = Vector2( 2.7, 19.1 )
+shape = SubResource( 6 )
+
+[node name="pipe6" type="StaticBody2D" parent="pipe"]
+editor/display_folded = true
+position = Vector2( 2000, -300 )
+script = ExtResource( 3 )
+
+[node name="topPipe" type="Sprite" parent="pipe/pipe6"]
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 4 )
+
+[node name="bottomPipe" type="Sprite" parent="pipe/pipe6"]
+position = Vector2( 0, 700 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 5 )
+
+[node name="topPipeCollision6" type="CollisionShape2D" parent="pipe/pipe6"]
+scale = Vector2( 2.7, 32.3 )
+shape = SubResource( 5 )
+
+[node name="bottomPipeCollision6" type="CollisionShape2D" parent="pipe/pipe6"]
+position = Vector2( 0, 700 )
+scale = Vector2( 2.7, 19.1 )
+shape = SubResource( 6 )
+
+[node name="bird" type="KinematicBody2D" parent="."]
+position = Vector2( 150, 200 )
+script = ExtResource( 6 )
+
+[node name="birdSprite" type="AnimatedSprite" parent="bird"]
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 1 )
+speed_scale = 2.5
+
+[node name="birdCollision" type="CollisionShape2D" parent="bird"]
+position = Vector2( 5, 0 )
+rotation = 1.5708
+scale = Vector2( 2, 1.4 )
+shape = SubResource( 7 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -300, -100 )
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 11 )
+
+[node name="floor1" type="Sprite" parent="floor"]
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
+
+[node name="floor2" type="Sprite" parent="floor"]
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
+
+[node name="floor3" type="Sprite" parent="floor"]
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+scale = Vector2( 31, 7.6 )
+shape = SubResource( 3 )
+
+[node name="ceiling" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 150, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ceiling"]
+scale = Vector2( 15, 1 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.01
+autostart = true
+[connection signal="timeout" from="Timer" to="pipe/pipe6" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="pipe/pipe4" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="pipe/pipe5" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="pipe/pipe1" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="pipe/pipe3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="pipe/pipe2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="floor/floor1" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="floor/floor3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="floor/floor2" method="_on_Timer_timeout"]
