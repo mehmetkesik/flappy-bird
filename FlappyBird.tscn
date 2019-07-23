@@ -272,13 +272,13 @@ icon = ExtResource( 17 )
 flat = true
 script = ExtResource( 18 )
 [connection signal="timeout" from="speedTimer" to="." method="_on_speedTimer_timeout"]
-[connection signal="timeout" from="Timer" to="pipe/pipe1" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="pipe/pipe4" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="pipe/pipe2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="pipe/pipe1" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="pipe/pipe3" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="pipe/pipe5" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="pipe/pipe6" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="floor/floor1" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="floor/floor2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="floor/floor3" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Timer" to="floor/floor1" method="_on_Timer_timeout"]
 [connection signal="pressed" from="resultvbox/restartbutton" to="resultvbox/restartbutton" method="_on_restartbutton_pressed"]
