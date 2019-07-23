@@ -1,2 +1,2 @@
 # Flappy Bird
-flappy bird width godot game engine 3
+Flappy bird width godot game engine 3
