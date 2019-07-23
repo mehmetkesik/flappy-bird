@@ -5,4 +5,4 @@ Flappy bird width godot game engine 3
 
 ## Game Image
 
-![game image](https://www.github.com/mehmetkesik")
+![game image](https://github.com/mehmetkesik/flappy-bird/blob/master/asset/pic.png)
